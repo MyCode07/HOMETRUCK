@@ -1,0 +1,47 @@
+.news {
+    // .news-page
+
+    &-page {
+    }
+
+    
+
+    // .news__image
+
+    &__image {
+        // .news__image-img
+
+        &-img {
+            border-radius: 10px;
+            overflow: hidden;
+            @include adaptive-value("height", 421, 260, 1);
+
+            @media (min-width: 1025px) {
+                margin-bottom: 30px;
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+
+    .grid {
+        gap: 12px;
+
+        @media (max-width: 1024px) {
+            display: flex;
+            flex-direction: column-reverse;
+
+            gap: 30px;
+        }
+    }
+}
+
+._maintext {
+    display: block;
+    padding-left: 23px;
+    border-left: 1px solid $accent;
+}

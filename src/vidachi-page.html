@@ -1,0 +1,73 @@
+@@include('./html/head.html', {
+"title":"vidachi-page",
+})
+
+@@include('./html/header.html', {
+"class":"header-pages",
+})
+
+<main>
+
+    <section class="section pages-hero__v2 vidachi-catalog">
+
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top">
+                    <div class="background-image">
+                        <img src="img/vidachi-bgi.png" alt="">
+                    </div>
+                    <div>
+                        <h1>Выдачи</h1>
+                        <a href="" class="_btn">
+                            <span>Вконтакте</span>
+                            <svg viewBox="0 0 7 12">
+                                <use xlink:href="img/svg/icons.svg#link-arrow"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <ul class="category-list">
+                        <li class="_active"><a href="">Все</a></li>
+                        <li><a href="">Седельные тягачи</a></li>
+                        <li><a href="">С фургоном</a></li>
+                        <li><a href="">Самосвалы</a></li>
+                        <li><a href="">Автобетоносмесиели</a></li>
+                        <li><a href="">Автокраны</a></li>
+                        <li><a href="">Полуприцепы</a></li>
+                        <li><a href="">Вилочные погрузчики</a></li>
+                        <li><a href="">Кран-манипулятор (КМУ)</a></li>
+                    </ul>
+                </div>
+                <div class="section__bottom">
+                    <div class="grid grid-4">
+                        <a href="" class="vidacha-item">
+                            <img src="img/vidacha.png" alt="">
+                            <data>Дата 18.10.2023</data>
+                        </a><a href="" class="vidacha-item">
+                            <img src="img/vidacha.png" alt="">
+                            <data>Дата 18.10.2023</data>
+                        </a><a href="" class="vidacha-item">
+                            <img src="img/vidacha.png" alt="">
+                            <data>Дата 18.10.2023</data>
+                        </a><a href="" class="vidacha-item">
+                            <img src="img/vidacha.png" alt="">
+                            <data>Дата 18.10.2023</data>
+                        </a><a href="" class="vidacha-item">
+                            <img src="img/vidacha.png" alt="">
+                            <data>Дата 18.10.2023</data>
+                        </a>
+                    </div>
+                </div>
+                <button class="_more">
+                    <span>Показать еще</span>
+                    <svg viewBox="0 0 7 12">
+                        <use xlink:href="img/svg/icons.svg#link-arrow"></use>
+                    </svg>
+                </button>
+
+            </div>
+    </section>
+
+</main>
+
+@@include('html/footer.html')
+@@include('html/scripts.html')

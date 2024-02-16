@@ -1,0 +1,122 @@
+@@include('./html/head.html', {
+"title":"news page",
+})
+
+@@include('./html/header.html', {
+"class":"header-pages",
+})
+
+<main>
+
+    <section class="section pages-hero news-page" data-replace-width="1024">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li>
+                                <a href="">Новости и статьи</a>
+                            </li>
+                            <li>
+                                <div>
+                                    <svg viewBox="0 0 7 12">
+                                        <use xlink:href="img/svg/icons.svg#link-arrow"></use>
+                                    </svg>
+                                </div>
+                                <a href="">День работников дорожного хозяйства!</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section__bottom">
+                    <div class="grid grid-2">
+                        <div class="_info" data-replace-new-position="beforebegin">
+                            <div class="_info-top">
+                                <a href="" class="_info-title">День работников дорожного хозяйства!</a>
+                                <time>18.10.2023</time>
+                            </div>
+                            <p>Ваш труд и профессионализм играют ключевую роль в обеспечении комфорта и безопасности на
+                                наших дорогах. В этот особенный
+                                день, мы выражаем вам нашу искреннюю благодарность за ваши усилия, направленные на
+                                создание высококачественных и
+                                безопасных инфраструктурных объектов.</p>
+                            <br><br>
+                            <p class="_maintext">Ваш труд и профессионализм играют ключевую роль в обеспечении комфорта
+                                и безопасности на наших дорогах. В этот особенный
+                                день, мы выражаем вам нашу искреннюю благодарность за ваши усилия, направленные на
+                                создание высококачественных и
+                                безопасных инфраструктурных объектов.</p>
+                            <br><br>
+                            <img src="img/img.png" alt="">
+                            <br><br>
+                            <p>Ваш труд и профессионализм играют ключевую роль в обеспечении комфорта и безопасности на
+                                наших дорогах. В этот особенный
+                                день, мы выражаем вам нашу искреннюю благодарность за ваши усилия, направленные на
+                                создание высококачественных и
+                                безопасных инфраструктурных объектов.</p>
+                        </div>
+                        <div class="news__image">
+                            <div class="news__image-img" data-replace-old-position="afterend">
+                                <img src="img/news.png" alt="">
+                            </div>
+                            <div class="_socialmedia" data-replace-element>
+                                <label>Поделиться</label>
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <svg width="23" height="19" viewBox="0 0 23 19">
+                                                <use xlink:href="img/svg/icons.svg#telegramm"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <svg width="17" height="17" viewBox="0 0 17 17">
+                                                <use xlink:href="img/svg/icons.svg#insta"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <svg width="23" height="24" viewBox="0 0 23 24">
+                                                <use xlink:href="img/svg/icons.svg#wh"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <svg width="21" height="15" viewBox="0 0 21 15">
+                                                <use xlink:href="img/svg/icons.svg#youtube"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <svg width="25" height="15" viewBox="0 0 25 15">
+                                                <use xlink:href="img/svg/icons.svg#vk"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <svg width="12" height="18" viewBox="0 0 12 18">
+                                                <use xlink:href="img/svg/icons.svg#ok"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    @@include('./html/parts/news.html', {
+    "title":"Другие новости",
+    })
+
+</main>
+
+@@include('html/footer.html')
+@@include('html/scripts.html')

@@ -1,0 +1,143 @@
+.menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+
+    background-color: $gray;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    height: auto;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-200%);
+
+    transition: transform 0.3s ease 0s;
+    z-index: -1;
+
+    &._open {
+        opacity: 1;
+        pointer-events: all;
+        transform: translate(0);
+        z-index: 8;
+    }
+
+    nav {
+        padding: 20px 10px;
+
+        & > :last-child {
+            padding-bottom: 30px;
+        }
+
+        & > ul {
+            & > :not(:last-child) {
+                margin-bottom: 23px;
+            }
+
+            & > li {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 100%;
+
+                & > a {
+                    width: calc(100% - 20px);
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 1.1;
+                    text-transform: uppercase;
+                }
+
+                button {
+                    svg {
+                        transform: rotate(-90deg);
+                        fill: none;
+                        stroke: $text;
+                        width: 15px;
+                        height: 10px;
+                        flex: 0 0 auto;
+                        transition: all 0.3s ease 0s;
+                        pointer-events: none;
+                    }
+                }
+
+                &[data-open="open"] {
+                    & > a {
+                        color: $accent;
+                    }
+
+                    svg {
+                        transform: rotate(-180deg);
+                        stroke: $accent;
+                    }
+
+                    .dropdown-menu {
+                        pointer-events: all;
+                        overflow: visible;
+                        height: auto;
+                        padding-top: 30px;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .dropdown-menu {
+            pointer-events: none;
+            overflow: hidden;
+            height: 0;
+            opacity: 0;
+            transition: all 0.3s ease 0s;
+
+            & > :not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            & > :last-child {
+                nav {
+                    display: grid;
+                    gap: 0 50px;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            label {
+                margin-bottom: 10px;
+                display: block;
+                opacity: 0.5;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1.4;
+                text-transform: uppercase;
+            }
+
+            nav {
+                padding: 0;
+
+                & > :not(:last-child) {
+                    margin-bottom: 10px;
+                }
+
+                ul {
+                    & > :not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+
+                    li {
+                        width: 100%;
+
+                        a {
+                            width: 100%;
+                            font-family: Lato;
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 1.6;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
