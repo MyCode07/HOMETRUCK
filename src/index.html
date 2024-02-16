@@ -1,5 +1,5 @@
 @@include('./html/head.html', {
-"title":"Главная Дилер",
+"title":"Главная",
 })
 
 @@include('./html/header.html')
@@ -7,11 +7,8 @@
 <main>
 
     <section class="hero">
-        <div class="bg-image">
-            <video poster="img/hero-video-mobile.png">
-                <!-- <source src="hero.mp4" type="video/mp4">
-                <source src="hero.ogg" type="video/ogg"> -->
-            </video>
+        <div class="hero__media">
+            <video poster="img/hero-video.png"></video>
         </div>
         <div class="hero__container _container">
             <div class="hero__body">
@@ -185,7 +182,7 @@
                 <div class="section__top section__top-v2">
                     <div>
                         <h2>Тягачи</h2>
-                        <ul>
+                        <ul class="category-list">
                             <li><a href="">shanmon</a></li>
                             <li><a href="">foton</a></li>
                             <li><a href="">shacman</a></li>
@@ -422,7 +419,7 @@
                 <div class="section__top section__top-v2">
                     <div>
                         <h2>Экскаваторы</h2>
-                        <ul>
+                    <ul class="category-list">
                             <li><a href="">JCB</a></li>
                             <li><a href="">BIZON</a></li>
                             <li><a href="">LONKING</a></li>
@@ -1210,37 +1207,37 @@
                                 <div class="swiper-slide">
                                     <a href="" class="vidacha-item">
                                         <img src="img/vidacha.png" alt="">
-                                        <data>Дата 18.10.2023</data>
+                                        <time>Дата 18.10.2023</time>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
                                     <a href="" class="vidacha-item">
                                         <img src="img/vidacha.png" alt="">
-                                        <data>Дата 18.10.2023</data>
+                                        <time>Дата 18.10.2023</time>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
                                     <a href="" class="vidacha-item">
                                         <img src="img/vidacha.png" alt="">
-                                        <data>Дата 18.10.2023</data>
+                                        <time>Дата 18.10.2023</time>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
                                     <a href="" class="vidacha-item">
                                         <img src="img/vidacha.png" alt="">
-                                        <data>Дата 18.10.2023</data>
+                                        <time>Дата 18.10.2023</time>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
                                     <a href="" class="vidacha-item">
                                         <img src="img/vidacha.png" alt="">
-                                        <data>Дата 18.10.2023</data>
+                                        <time>Дата 18.10.2023</time>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
                                     <a href="" class="vidacha-item">
                                         <img src="img/vidacha.png" alt="">
-                                        <data>Дата 18.10.2023</data>
+                                        <time>Дата 18.10.2023</time>
                                     </a>
                                 </div>
                             </div>
@@ -1255,7 +1252,6 @@
             </div>
         </div>
     </section>
-
 
     @@include('./html/parts/news.html', {
     "title":"новости",

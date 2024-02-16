@@ -49,7 +49,6 @@
 // load popup
 @import "common/popup";
 
-
 // load catalog
 @import "parts/hero";
 
@@ -65,13 +64,14 @@
 // load catalog
 @import "parts/catalog";
 
+// load product
+@import "parts/product";
+
 // load news-catalog
 @import "parts/news-catalog";
 
 // load news-page
 @import "parts/news-page";
-
-
 
 .pages {
     position: fixed;

@@ -3,6 +3,8 @@
     top: 60px;
     left: 0;
     width: 100%;
+    max-height: calc(100% - 60px);
+    overflow-y: auto;
 
     background-color: $gray;
     border-bottom-left-radius: 10px;
@@ -113,6 +115,7 @@
             }
 
             nav {
+                display: block;
                 padding: 0;
 
                 & > :not(:last-child) {

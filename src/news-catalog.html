@@ -10,37 +10,30 @@
 
     <section class="section pages-hero news-catalog">
         <div class="section__container _container">
-
             <div class="section__body">
                 <div class="section__top">
-                    <div class="breadcrumbs">
-                        <ul>
-                            <li>
-                                <a href="">Новости и статьи</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <h1>Новости и статьи</h1>
                 </div>
                 <div class="section__bottom">
                     <div class="section__flex">
-                        <button class="news-catalog__category">
-                            <span>Все категории</span>
-                            <svg viewBox="0 0 7 12">
-                                <use xlink:href="img/svg/icons.svg#link-arrow"></use>
-                            </svg>
-                            <ul>
-                                <li>
-                                    <a href="">категория 1</a>
-                                </li>
-                                <li>
-                                    <a href="">категория 1</a>
-                                </li>
-                                <li>
-                                    <a href="">категория 1</a>
-                                </li>
-                            </ul>
-                        </button>
-                        <button class="news-catalog__sort">
+                        <div class="filter ">
+                            <div class="filter__title">
+                                <span>Все категории</span>
+                                <svg viewBox="0 0 7 12">
+                                    <use xlink:href="img/svg/icons.svg#link-arrow"></use>
+                                </svg>
+                            </div>
+                            <div class="filter__items-list">
+                                <div class="filter__items-body">
+                                    <button>С фургоном</button>
+                                    <button>Самосвалы</button>
+                                    <button>Автокраны</button>
+                                    <button>Полуприцепы</button>
+                                    <button>Кабины и запчасти</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="sort">
                             <span>По дате</span>
                             <svg viewBox="0 0 24 25">
                                 <use xlink:href="img/svg/icons.svg#sort"></use>
@@ -119,6 +112,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
 </main>

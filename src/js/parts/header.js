@@ -8,10 +8,10 @@ export const stickyHeader = () => {
 
     const sticky = () => {
         if (window.scrollY > headerheigth) {
-            header.classList.add('_sticky')
+            header.classList.add('_scrolled')
         }
         else {
-            header.classList.remove('_sticky')
+            header.classList.remove('_scrolled')
         }
     }
 

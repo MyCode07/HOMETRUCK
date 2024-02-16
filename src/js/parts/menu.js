@@ -71,16 +71,23 @@ if (submenuList.length) {
             const btn = li.querySelector('button');
 
             if (btn) {
-                if ((btn.closest('.menu') || btn.closest('.header')) && isMobile.any()) {
-                    btn.addEventListener('click', function () {
-                        toggleMenu(li)
-                    })
-                }
-                else {
-                    btn.addEventListener('click', function () {
-                        toggleMenu(li)
-                    })
-                }
+                btn.addEventListener('click', function () {
+                    toggleMenu(li)
+
+                    if (li.closest('.header')) {
+                        header.classList.toggle('_sticky')
+                    }
+                })
+            }
+
+            if (!isMobile.any() && li.closest('.header')) {
+                li.addEventListener('mouseenter', function () {
+                    header.classList.add('_sticky')
+                })
+
+                li.addEventListener('mouseleave', function () {
+                    header.classList.remove('_sticky')
+                })
             }
 
             const btnArrow = li.querySelector('.menu-arrow');

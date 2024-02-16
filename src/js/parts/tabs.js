@@ -1,6 +1,5 @@
 const tabAreas = document.querySelectorAll('[data-tabs-area]');
 
-
 if (tabAreas.length) {
     tabAreas.forEach(area => {
         const tabs = area.querySelectorAll('[data-tab]');

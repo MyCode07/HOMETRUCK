@@ -1,25 +1,40 @@
 .header {
     position: fixed;
     top: 20px;
-    left: 0;
-    width: 100%;
+    left: 20px;
+    width: calc(100% - 40px);
     z-index: 10;
 
-    @media (min-width: 769px) {
+    transition: all 0.3s ease 0s;
+
+    @media (min-width: 1025px) {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 1024px) {
+        width: 100%;
+        left: 0;
         top: 0;
-        padding: 11px 0;
+        height: 60px;
+
+        background-color: $text;
+        border-radius: 0px;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &._scrolled {
+        background-color: $text;
+
+        @media (min-width: 1025px) {
+            border-radius: 10px;
+        }
     }
 
     &._sticky {
         background-color: $text;
-        top: 0;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
     }
 
     // .header-pages
@@ -31,6 +46,7 @@
     // .header__container
 
     &__container {
+        flex: 0 0 100%;
     }
 
     // .header__body
@@ -48,22 +64,22 @@
         align-items: center;
         justify-content: center;
 
-        background-color: $text;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
         width: fit-content;
+        flex: 0 0 auto;
 
-        @media (max-width:600px) {
-            flex: 1 1 auto;
+        @media (min-width: 1025px) {
+            padding: 11px 17px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: $text;
         }
 
         img,
         svg {
             width: 103px;
-            height: 39px;
             flex: 0 0 auto;
 
-            @media (max-width: 992px) {
+            @media (max-width: 1024px) {
                 width: 88px;
             }
 
@@ -76,35 +92,35 @@
     // .header__menu
 
     &__menu {
-        @media (max-width: 992px) {
+        @media (max-width: 1024px) {
             display: none;
         }
 
-        // .header__menu-body
-
-        &-body {
+        & > ul {
             display: flex;
             align-items: center;
             @include adaptive-value("gap", 32, 15, 1);
+
+            & > li {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                height: 60px;
+            }
         }
 
-        // .header__menu-item
-
-        &-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            height: 60px;
-
-            & > a {
-                color: $white;
+        ul {
+            li a {
                 font-size: 14px;
                 font-weight: 600;
                 line-height: 1.6;
                 text-transform: uppercase;
                 transition: color 0.3s ease 0s;
+                color: $white;
             }
+        }
 
+        li {
             @media (any-hover: hover) {
                 &:hover {
                     & > a {
@@ -184,6 +200,7 @@
                     @include adaptive-value("gap", 40, 20, 1);
 
                     ul {
+                        display: block;
                         width: fit-content;
 
                         & > :not(:last-child) {
@@ -239,13 +256,13 @@
         align-items: center;
         gap: 20px;
 
-        @media (max-width: 992px) {
+        @media (max-width: 1024px) {
             gap: 0;
         }
 
         @media (max-width: 600px) {
             flex: 1 1 auto;
-            justify-content: space-between;
+            justify-content: flex-end;
         }
 
         .tel {
@@ -256,14 +273,15 @@
             text-transform: uppercase;
             white-space: nowrap;
 
-            @media (max-width: 992px) {
+            @media (max-width: 1024px) {
                 font-weight: 700;
+                margin-right: 26px;
             }
         }
 
         .btn-contact {
-            @media (max-width: 992px) {
-                margin: 0 18px 0 26px;
+            @media (max-width: 1024px) {
+                margin-right: 18px;
             }
 
             @media (max-width: 600px) {
@@ -278,6 +296,10 @@
     // .header__burger
 
     &__burger {
+        @media (min-width: 1025px) {
+            display: none;
+        }
+
         display: block;
         width: 28px;
         height: 16px;

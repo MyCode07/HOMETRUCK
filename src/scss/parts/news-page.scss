@@ -2,9 +2,17 @@
     // .news-page
 
     &-page {
-    }
+        .grid {
+            gap: 12px;
 
-    
+            @media (max-width: 1024px) {
+                display: flex;
+                flex-direction: column-reverse;
+
+                gap: 30px;
+            }
+        }
+    }
 
     // .news__image
 
@@ -24,18 +32,6 @@
                 height: 100%;
                 object-fit: cover;
             }
-        }
-    }
-
-
-    .grid {
-        gap: 12px;
-
-        @media (max-width: 1024px) {
-            display: flex;
-            flex-direction: column-reverse;
-
-            gap: 30px;
         }
     }
 }
