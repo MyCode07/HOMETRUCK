@@ -179,29 +179,29 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section hometruck">
         <div class="section__container _container">
             <div class="section__body">
                 <h2>home truck <span>это</span> </h2>
                 <div class="grid grid-5">
-                    <div class="advantages2-item">
+                    <div class="hometruck-item">
                         <h3>Оперативная<br> доставка</h3>
                         <span>1</span>
                     </div>
-                    <div class="advantages2-item">
+                    <div class="hometruck-item">
                         <h3>любая точка<br>
                             страны</h3>
                         <span>2</span>
                     </div>
-                    <div class="advantages2-item">
+                    <div class="hometruck-item">
                         <h3>установка доп.<br> оборудования</h3>
                         <span>3</span>
                     </div>
-                    <div class="advantages2-item">
-                        <h3>надежный партнер</h3>
+                    <div class="hometruck-item">
+                        <h3>надежный <br> партнер</h3>
                         <span>4</span>
                     </div>
-                    <div class="advantages2-item">
+                    <div class="hometruck-item">
                         <h3>комплексный<br> подход</h3>
                         <span>5</span>
                     </div>
@@ -222,15 +222,21 @@
                         </svg>
                     </a>
                 </div>
-                <div class="section__flex">
-                    <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
-                    <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
-                    <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
-                    <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
-                    <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
-                    <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
-                    <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
-                    <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
+                <div class="section-scroll">
+                    <div class="section__flex">
+                        <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
+                        <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
+                        <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
+                        <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
+                        <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
+                        <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
+                        <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
+                        <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
+                        <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
+                        <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
+                        <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
+                        <a href="" class="partner-item"><img src="img/partner.png" alt=""></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -239,6 +245,45 @@
     @@include('./html/parts/news.html', {
     "title":"новости",
     })
+
+    <section class="section map">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="grid grid-2">
+                    <div class="map-info" data-tabs-area>
+                        <div class="map-info__tabs" data-tabs>
+                            <button class="_active" data-tab="0">Офис</button>
+                            <button data-tab="1">Офис 2</button>
+                            <button data-tab="2">Площадка</button>
+                        </div>
+                        <div class="map-info__content">
+                            <div class="map-info__address">
+                                <span class="_active" data-tab-content="0">Офис:<label>Москва, Каширское ш., д. 3, к. 2
+                                        стр. 9</label></span>
+                                <span data-tab-content="1">Офис:<label>00, Каширское ш., д. 3, к. 2 стр.
+                                        9</label></span>
+                                <span data-tab-content="2">Офис:<label>00000, Каширское ш., д. 3, к. 2 стр.
+                                        9</label></span>
+                            </div>
+                            <a href="tel:+84957954748" target="_blank" class="phone">8 (495) 795-47-48</a>
+                            <div class="map-info__actions">
+                                <button class="btn-contact">Связаться</button>
+                                <button class="_btn">
+                                    <span>Маршрут</span>
+                                    <svg viewBox="0 0 7 12">
+                                        <use xlink:href="img/svg/icons.svg#link-arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-cart">
+                        <img src="img/map.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </main>
 

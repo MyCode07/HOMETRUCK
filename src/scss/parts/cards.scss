@@ -9,6 +9,20 @@
     position: relative;
     overflow: hidden;
 
+    span {
+        color: $accent;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.6;
+        text-transform: uppercase;
+        display: block;
+        margin-top: 14px;
+
+        @media (max-width: 1024px) {
+            margin-top: 6px;
+        }
+    }
+
     @media (max-width: 1024px) {
         padding: 13px 10px;
     }
@@ -638,6 +652,7 @@
             width: 110%;
             height: 338px;
             transform: rotate(70deg);
+            top: 45%;
 
             @media (max-width: 1240px) and (min-width: 993px) {
                 height: 460px;
@@ -645,11 +660,9 @@
 
             @media (min-width: 1025px) {
                 left: 10%;
-                top: 45%;
             }
 
             @media (max-width: 1024px) {
-                top: 60%;
                 left: 12%;
             }
         }
@@ -889,5 +902,37 @@
         @media (max-width: 768px) {
             margin-left: 10px;
         }
+    }
+}
+
+.hometruck-item {
+    border-radius: 10px;
+    background-color: #f5ebdd;
+    padding: 14px 16px;
+    position: relative;
+    height: 174px;
+    overflow: hidden;
+    min-width: 162px;
+
+    span {
+        position: absolute;
+        right: -5%;
+        bottom: -10%;
+        color: $accent;
+        font-size: 124px;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+}
+
+.partner-item {
+    display: block;
+
+    width: 202px;
+    height: 100px;
+    flex: 0 0 auto;
+    img {
+        object-fit: contain;
     }
 }
