@@ -23,6 +23,10 @@
             margin-bottom: 14px;
         }
 
+        &:has(ol, ul, p) h2 {
+            margin-bottom: 27px;
+        }
+
         &-v2 {
             padding: 20px;
             align-items: flex-end;
@@ -63,10 +67,6 @@
             h2 {
                 position: relative;
                 z-index: 2;
-            }
-
-            &:has(ol, ul, p) h2 {
-                margin-bottom: 27px;
             }
 
             p {
