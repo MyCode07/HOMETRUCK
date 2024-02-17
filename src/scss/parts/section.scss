@@ -129,6 +129,7 @@
     // .services-slider
 
     &-slider {
+        max-width: unset;
     }
 
     .swiper {
@@ -219,6 +220,7 @@
 
         .swiper-slide {
             @media (max-width: 768px) {
+                max-width: unset;
             }
         }
     }
@@ -326,6 +328,10 @@
             display: flex;
             align-items: center;
             gap: 30px;
+
+            @media (max-width: 1024px) {
+                gap: 20px;
+            }
 
             a {
                 display: flex;
@@ -708,6 +714,7 @@
 
             gap: 20px;
             grid-column: span 4;
+            
             @media (max-width: 1024px) {
                 grid-column: span 3;
                 gap: 15px;
@@ -1301,5 +1308,24 @@
         .clue-text {
             left: 0;
         }
+    }
+}
+
+.privacy {
+    .section__bottom {
+        padding: 30px;
+
+        @media (max-width: 1024px) {
+            padding: 10px;
+        }
+    }
+    h3 {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.4;
     }
 }
