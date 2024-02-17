@@ -894,7 +894,7 @@
         height: 38px;
 
         @media (max-width: 1024px) {
-            width: 100%;
+            width: calc(100% - 10px);
             margin-left: 15px;
             margin-top: 17px;
         }

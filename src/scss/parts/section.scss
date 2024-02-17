@@ -946,6 +946,27 @@
                 right: -10px;
             }
         }
+
+        .grid-3 {
+            gap: 20px;
+            justify-items: unset;
+            @media (max-width: 1024px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+
+            div {
+                min-height: 291px;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
     }
 
     &._garant {
@@ -1227,6 +1248,11 @@
 
     &-cart {
         min-height: 280px;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
     }
 
     .phone {

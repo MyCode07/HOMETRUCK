@@ -3,11 +3,20 @@
         &__flex {
             gap: 20px;
 
+            @media (max-width: 1024px) {
+                flex-direction: column;
+                gap: 0;
+            }
+
             &-left {
                 flex: 1 1 auto;
                 padding: 40px 30px;
                 border-radius: 10px;
                 background-color: $white;
+
+                @media (max-width: 1024px) {
+                    padding: 15px 15px 35px 15px;
+                }
             }
 
             &-right {
@@ -17,6 +26,11 @@
                 padding: 40px 30px;
                 border-radius: 10px;
                 background-color: #f1f3f4;
+
+                @media (max-width: 1024px) {
+                    padding: 40px 15px;
+                    max-width: unset;
+                }
             }
         }
     }
@@ -59,14 +73,22 @@
 
     &-result {
         .price {
-        }
-        ._btn {
+            color: $text;
+            font-size: 27px;
+            font-weight: 500;
+            line-height: 1.2;
+            text-transform: uppercase;
         }
 
         .clue {
             // .clue-button
 
             &-button {
+                margin-bottom: 10px;
+
+                .clue-text {
+                    left: 0;
+                }
             }
 
             // .clue-text
@@ -78,21 +100,127 @@
         // .calculator-result__mounth
 
         &__mounth {
+            margin-bottom: 20px;
+            .clue-button {
+                span {
+                    color: $text;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 1.4;
+                    text-transform: uppercase;
+
+                    @media (max-width: 768px) {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .price {
+                color: $accent;
+                font-size: 50px;
+                font-weight: 500;
+                line-height: 1.2;
+                text-transform: uppercase;
+            }
         }
 
         // .calculator-result__deal
 
         &__deal {
+            margin-bottom: 38px;
+
+            .clue-button {
+                span {
+                    @media (max-width: 768px) {
+                        font-size: 14px;
+                    }
+                }
+            }
         }
 
         // .calculator-result__tax
 
         &__tax {
+            margin-bottom: 70px;
+
+            @media (max-width: 1024px) {
+                margin-bottom: 50px;
+            }
+
+            .clue-button {
+                span {
+                    @media (max-width: 768px) {
+                        font-size: 14px;
+                    }
+                }
+            }
         }
 
         // .calculator-result__bottom
 
         &__bottom {
+            div {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                gap: 20px;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 38px;
+                    padding: 3px 10px;
+                    gap: 6px;
+                    border-radius: 10px;
+                    background-color: $white;
+
+                    color: $accent;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 1;
+                    text-transform: uppercase;
+
+                    svg {
+                        width: 14px;
+                        height: 14px;
+                        flex: 0 0 auto;
+                        fill: none;
+                        stroke: $accent;
+                    }
+                }
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    border-radius: 10px;
+                    background-color: $accent;
+                    height: 38px;
+                    padding: 3px 20px;
+
+                    color: $white;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 1;
+                    text-transform: uppercase;
+                    transition: background-color 0.3s ease 0s;
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            background-color: #ffa034;
+                        }
+                    }
+                }
+            }
+
+            p {
+                color: rgba($color: $text, $alpha: 0.5);
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 1.4;
+            }
         }
     }
 }
@@ -103,6 +231,17 @@
     &-body {
         & > :not(:last-child) {
             margin-bottom: 30px;
+        }
+
+        .price {
+            color: var(--111, rgba(153, 153, 153, 0.6));
+            span {
+                color: $text;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 1.4;
+                text-transform: uppercase;
+            }
         }
     }
 
@@ -194,7 +333,7 @@
     background-color: $accent;
 
     &:after {
-        background-color: $accent;
+        background-color: $white;
     }
 
     &:before {
