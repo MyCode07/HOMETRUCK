@@ -714,7 +714,7 @@
 
             gap: 20px;
             grid-column: span 4;
-            
+
             @media (max-width: 1024px) {
                 grid-column: span 3;
                 gap: 15px;
@@ -853,8 +853,6 @@
         border-radius: 10px;
         background-color: #f1f3f4;
         padding: 58px 32px;
-        overflow-x: auto;
-        margin-left: -10px;
 
         &::-webkit-scrollbar {
             display: none;
@@ -1084,6 +1082,16 @@
                     object-fit: cover;
                 }
             }
+        }
+    }
+
+    .grid-5:has(.partner-item) {
+        .partner-item {
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }

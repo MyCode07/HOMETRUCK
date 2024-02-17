@@ -9,7 +9,8 @@ import "./parts/tabs.js";
 import "./parts/news.js";
 
 import "./parts/sliders.js";
-// import "./parts/popup.js";
+import "./static/ticker.js";
+import { calculator } from "./parts/calculator.js";
 // import "./parts/catalog.js";
 // import "./parts/tabs.js";
 // import "./parts/filter.js";
@@ -20,7 +21,7 @@ import "./parts/sliders.js";
 // maskInputs('+7 (999) 999-99-99', '._mask-phone')
 replaceDomElements();
 stickyHeader();
-
+calculator();
 
 
 // import { Fancybox } from "@fancyapps/ui";

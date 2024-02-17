@@ -73,6 +73,12 @@
 // load news-page
 @import "parts/news-page";
 
+// load dhx suite
+@import "parts/dhx-suite.min";
+
+// load calculator
+@import "parts/calculator";
+
 .pages {
     position: fixed;
     top: 50%;
