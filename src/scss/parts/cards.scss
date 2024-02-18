@@ -111,14 +111,22 @@
         padding: 20px;
     }
 
-    picture,
-    img {
+    div {
         position: absolute;
         right: 0;
-        bottom: -98px;
+        bottom: -100px;
         width: 290px;
-        height: 382px;
         z-index: 1;
+        height: 382px;
+    }
+
+    picture {
+        height: 100%;
+    }
+
+    img {
+        object-fit: cover;
+        height: 100%;
     }
 
     .svg {

@@ -316,6 +316,13 @@
             position: relative;
             z-index: 1;
         }
+
+        &.about-page {
+            .section__top {
+                padding-bottom: 0;
+                @include adaptive-value("padding-top", 25, 168, 1);
+            }
+        }
     }
 }
 

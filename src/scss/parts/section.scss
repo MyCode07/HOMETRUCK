@@ -560,6 +560,11 @@
         padding-bottom: 0;
         margin-bottom: 56px;
         @include adaptive-value("padding-top", 25, 168, 1);
+        padding-bottom: 0;
+
+        @media (max-width: 1024px) {
+            padding-top: 168px !important;
+        }
 
         h1 {
             display: block;
