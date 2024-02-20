@@ -24,9 +24,9 @@ stickyHeader();
 calculator();
 
 
-// import { Fancybox } from "@fancyapps/ui";
-// Fancybox.bind("[data-fancybox]", {
-// });
+import { Fancybox } from "@fancyapps/ui";
+Fancybox.bind("[data-fancybox]", {
+});
 
 
 

@@ -84,6 +84,11 @@
 
     &._over {
         @include adaptive-value("margin-bottom", -110, -60, 1);
+
+        & + section {
+            position: relative;
+            z-index: 1;
+        }
     }
 
     &.page-hero {
