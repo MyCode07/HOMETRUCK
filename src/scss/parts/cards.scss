@@ -34,11 +34,9 @@
         top: 0;
         width: 100%;
         height: 80%;
-        clip-path: polygon(0% 0%, 0% 77%, 100% 15%, 100% 0%);
+        clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
         background-color: $accent;
         transition: all 0.3s ease 0s;
-
-        max-width: 0;
     }
 
     h3 {
@@ -70,6 +68,7 @@
 
             &:after {
                 max-width: 100%;
+                clip-path: polygon(0% 0%, 0% 77%, 100% 15%, 100% 0%);
             }
         }
     }
@@ -118,6 +117,8 @@
         width: 290px;
         z-index: 1;
         height: 382px;
+
+        transition: transform 0.3s ease 0s;
     }
 
     picture {
@@ -136,25 +137,45 @@
     }
 
     h3,
-    a {
+    p {
         z-index: 2;
         position: relative;
     }
+
+    @media (any-hover: hover) {
+        &:hover {
+            div {
+                transform: scale(1.1);
+            }
+
+            ._btn {
+                color: $accent;
+            }
+        }
+    }
 }
 
-.tracks-item {
+.trucks-item {
     border-radius: 10px;
     background-color: $white;
     overflow: hidden;
     width: 100%;
 
     border: 1px solid rgba($color: $text, $alpha: 0.05);
+    transition: transform 0.3s ease 0s;
 
-    // .tracks-item__top
+    @media (any-hover: hover) {
+        &:hover {
+            transform: translate(0, 2px);
+        }
+    }
+
+    // .trucks-item__top
 
     &__top {
         position: relative;
         @include adaptive-value("height", 213, 110, 1);
+        overflow: hidden;
 
         span,
         .youtube,
@@ -195,7 +216,7 @@
         }
     }
 
-    // .tracks-item__img
+    // .trucks-item__img
 
     &__img {
         width: 100%;
@@ -211,7 +232,7 @@
         }
     }
 
-    // .tracks-item__bottom
+    // .trucks-item__bottom
 
     &__bottom {
         padding: 16px 14px;
@@ -305,6 +326,18 @@
     @include adaptive-value("padding-top", 40, 18, 1);
     @include adaptive-value("padding-left", 30, 10, 1);
     @include adaptive-value("padding-right", 30, 10, 1);
+
+    @media (any-hover: hover) {
+        &:hover {
+            ._btn {
+                color: $accent;
+            }
+
+            .image {
+                transform: scale(1.05);
+            }
+        }
+    }
 
     &:after {
         position: absolute;
@@ -404,18 +437,18 @@
         object-fit: cover;
         z-index: 1;
 
-        @media (min-width: 769px) {
-            @include adaptive-value("top", 32, 200, 1);
-            @include adaptive-value("width", 573, 340, 1);
-            @include adaptive-value("right", 210, 250, 1);
-        }
+        bottom: 0;
+        width: 46.21%;
+        right: 17%;
 
-        @media (max-width: 768px) {
-            width: 340px;
-            top: unset;
-            bottom: -20px;
+        transition: transform 0.3s ease 0s;
+
+        @media (max-width: 1024px) {
             right: unset;
-            left: 10px;
+            left: 20px;
+            width: calc(100% - 20px);
+            max-width: 340px;
+            bottom: -20px;
         }
     }
 
@@ -512,31 +545,34 @@
 
 .news-item {
     transition: all 0.3s ease 0s;
-    cursor: pointer;
+    padding: 16px 14px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 15px 14px 20px 0 rgba(0, 0, 0, 0.03);
 
     &:before {
         display: block;
         content: "";
+        position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 14px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
         background: linear-gradient(90deg, #d6e6ef 1.53%, #edf8fe 95.83%);
     }
 
     @media (any-hover: hover) {
         &:hover {
-            ._btn {
+            ._btn,
+            h3 {
                 color: $accent;
             }
         }
     }
 
-    // .news-item__title
-
-    &__title {
+    h3 {
         color: $text;
         font-size: 16px;
         font-weight: 700;
@@ -544,8 +580,9 @@
         text-transform: uppercase;
         margin-bottom: 14px;
         display: block;
-        padding-top: 16px;
-        padding-inline: 14px;
+        margin-top: 16px;
+
+        transition: color 0.3s ease 0s;
     }
 
     p {
@@ -555,7 +592,6 @@
         font-weight: 400;
         line-height: 1.4;
         margin-bottom: 20px;
-        padding-inline: 14px;
         display: block;
     }
 
@@ -564,8 +600,6 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        padding-inline: 14px;
-        padding-bottom: 16px;
 
         time {
             color: var(--2, rgba(153, 153, 153, 0.6));
@@ -583,6 +617,10 @@
             }
         }
     }
+}
+
+.swiper-slide .news-item {
+    box-shadow: none;
 }
 
 .available {

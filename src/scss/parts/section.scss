@@ -158,17 +158,12 @@
     }
 }
 
-.tracks {
-    .tracks-slider {
+.trucks {
+    .trucks-slider {
         display: flex;
         align-items: center;
         gap: 16px;
         position: relative;
-
-        .swiper-slide {
-            @media (max-width: 768px) {
-            }
-        }
     }
 
     .next,
@@ -190,7 +185,7 @@
         transform: translate(0, -50%) rotate(180deg);
     }
 
-    // .tracks-black
+    // .trucks-black
     &-black {
         .section__top-v2 {
             background-color: $text;
@@ -271,21 +266,20 @@
 
             .image {
                 width: 222px;
-                height: 260px;
-                transform: rotate(0);
-                right: 270px;
+                bottom: 30px;
+                right: 22%;
 
                 @media (max-width: 1024px) {
                     width: 162px;
-                    height: 187px;
-                    right: 50%;
-                    top: 124px;
+                    left: unset;
+                    right: 10%;
+                    bottom: 50px;
                 }
 
                 @media (max-width: 768px) {
-                    right: 50%;
-                    transform: translate(50%, 0);
-                    left: unset;
+                    bottom: 30px;
+                    right: unset;
+                    left: 25%;
                 }
             }
         }
@@ -370,14 +364,6 @@
     }
 
     .video-slider {
-        .swiper-slide {
-            max-width: 302px;
-            width: 100%;
-
-            @media (max-width: 768px) {
-                max-width: unset;
-            }
-        }
     }
 
     .video-slider,
@@ -386,17 +372,6 @@
         align-items: center;
         gap: 16px;
         position: relative;
-
-        @media (max-width: 1024px) {
-            width: 100vw;
-            padding-inline: 10px;
-            margin-left: -10px;
-        }
-
-        .swiper-slide {
-            @media (max-width: 768px) {
-            }
-        }
     }
 
     .next,
@@ -873,6 +848,7 @@
 
         h1 {
             @include adaptive-value("font-size", 50, 42, 1);
+            max-width: 700px;
         }
     }
 
@@ -884,10 +860,9 @@
         position: absolute;
         content: "";
         left: 0;
-        top: 180px;
-
-        width: 1754.893px;
-        height: 771.621px;
+        top: 184px;
+        width: 115%;
+        height: 200%;
         transform: rotate(-8.922deg);
     }
 

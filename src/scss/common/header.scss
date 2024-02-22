@@ -173,59 +173,53 @@
                     height: auto;
                 }
 
-                // .dropdown-menu__body
+                label {
+                    display: block;
+                    margin-bottom: 10px;
+                    color: rgba($color: $text, $alpha: 0.5);
 
-                &__body {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 1.2;
+                    text-transform: uppercase;
+                }
+
+                ._container {
+                    & > .grid {
+                        padding-top: 23px;
+                        padding-bottom: 25px;
+                        gap: 20px;
+                    }
+                }
+
+                ul {
                     display: flex;
-                    padding-top: 23px;
-                    padding-bottom: 25px;
-                    @include adaptive-value("gap", 135, 50, 1);
+                    gap: 4px 40px;
 
-                    div {
-                        label {
-                            display: block;
-                            margin-bottom: 10px;
-                            color: rgba($color: $text, $alpha: 0.5);
+                    li {
+                        width: fit-content;
 
-                            font-size: 16px;
-                            font-weight: 400;
-                            line-height: 1.2;
+                        a {
+                            color: $text;
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 1.6;
                             text-transform: uppercase;
                         }
                     }
                 }
 
-                nav {
-                    display: flex;
-                    @include adaptive-value("gap", 40, 20, 1);
+                // .dropdown-menu__nav
+
+                &__nav {
+                    div {
+                        display: flex;
+                        gap: 40px;
+                    }
 
                     ul {
-                        display: block;
-                        width: fit-content;
-
-                        & > :not(:last-child) {
-                            margin-bottom: 4px;
-                        }
-
-                        li {
-                            width: fit-content;
-                            a {
-                                color: $text;
-                                font-size: 14px;
-                                font-weight: 600;
-                                line-height: 1.6;
-                                text-transform: uppercase;
-                            }
-                        }
-
-                        &._flex {
-                            display: flex;
-                            @include adaptive-value("gap", 40, 20, 1);
-
-                            li {
-                                margin-bottom: 0;
-                            }
-                        }
+                        display: flex;
+                        flex-direction: column;
                     }
                 }
             }

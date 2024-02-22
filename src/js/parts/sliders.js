@@ -25,7 +25,7 @@ if (sliders.length) {
                 },
             })
         }
-        else if (slider.closest('.tracks')) {
+        else if (slider.closest('.trucks')) {
             new Swiper(slider, {
                 modules: [Pagination, Navigation, Autoplay],
                 pagination: {
