@@ -705,6 +705,78 @@ p {
     }
 }
 
+._lightpink {
+    background-color: #f7e6e4;
+
+    .svg {
+        fill: #f1d4d1;
+    }
+
+    &:after {
+        background-color: #f1d4d1;
+    }
+}
+
+._lightblue {
+    background-color: #d6e6ef;
+
+    .svg {
+        fill: #c1dae8;
+    }
+
+    &:after {
+        background-color: #c1dae8;
+    }
+}
+
+._green {
+    background-color: #d9e9db;
+
+    .svg {
+        fill: #b9dec0;
+    }
+
+    &:after {
+        background-color: #b9dec0;
+    }
+}
+
+._gallery {
+    .grid {
+        gap: 20px;
+
+        &-3 {
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: 600px) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    // ._gallery-item
+
+    &-item {
+        position: relative;
+        display: block;
+        border-radius: 10px;
+        overflow: hidden;
+
+        width: 100%;
+        padding-bottom: 75%;
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
 ._content {
     [style^="padding-left"] {
         display: block;

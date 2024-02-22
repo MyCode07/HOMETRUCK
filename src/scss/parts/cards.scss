@@ -85,27 +85,6 @@
     padding: 23px 20px;
     overflow: hidden;
 
-    &._lightpink {
-        background-color: #f7e6e4;
-        .svg {
-            fill: #f1d4d1;
-        }
-    }
-
-    &._lightblue {
-        background-color: #d6e6ef;
-        .svg {
-            fill: #c1dae8;
-        }
-    }
-
-    &._green {
-        background-color: #d9e9db;
-        .svg {
-            fill: #b9dec0;
-        }
-    }
-
     @media (max-width: 1024px) {
         padding: 20px;
     }
@@ -976,15 +955,37 @@
         line-height: 1;
         text-transform: uppercase;
     }
+
+    h3 {
+        max-width: 190px;
+    }
 }
 
 .partner-item {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    width: 202px;
-    height: 100px;
-    flex: 0 0 auto;
+    .icon {
+        width: 202px;
+        height: 100px;
+        flex: 0 0 auto;
+    }
+
+    picture,
     img {
+        height: 100%;
         object-fit: contain;
+    }
+}
+
+.grid:has(.partner-item) {
+    .partner-item {
+        margin: 0 auto;
+
+        .icon {
+            width: 100%;
+            height: auto;
+        }
     }
 }
