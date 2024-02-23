@@ -979,6 +979,34 @@
     }
 }
 
+.model-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+        width: 184px;
+        height: 184px;
+        flex: 0 0 auto;
+
+        @media (max-width: 768px) {
+            width: 133px;
+            height: 133px;
+        }
+
+        @media (max-width: 600px) {
+            width: 110px;
+            height: 110px;
+        }
+    }
+
+    picture,
+    img {
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
 .grid:has(.partner-item) {
     .partner-item {
         margin: 0 auto;
