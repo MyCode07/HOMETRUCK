@@ -8,7 +8,9 @@
 
     <section class="hero">
         <div class="hero__media">
-            <video poster="img/hero-video.png"></video>
+            <video playsinline poster="mg/hero-video.png" muted loop class="_video">
+                <source src="files/home-video-min.mp4" type="video/mp4">
+            </video>
         </div>
         <div class="hero__container _container">
             <div class="hero__body">
@@ -41,14 +43,15 @@
                         </ul>
                     </div>
                     <div class="search__box-search">
-                        <form action="">
-                            <input type="text" placeholder="Камаз с кму..." />
+                        <form role="search" method="get" id="searchform" action="https://hometruck.test-yeremyan.site/">
+                            <input type="text" placeholder="Камаз с кму..." value="" name="s" id="s">
+                            <button>
+                                <span>Искать</span>
+                                <svg viewBox="0 0 7 12">
+                                    <use xlink:href="img/svg/icons.svg#link-arrow">
+                                </svg>
+                            </button>
                         </form>
-                        <a href="">Искать
-                            <svg viewBox="0 0 7 12">
-                                <use xlink:href="img/svg/icons.svg#link-arrow"></use>
-                            </svg>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -846,7 +849,7 @@
         </div>
     </section>
 
-    <section class="section offer offer-blue">
+    <section class="section offer">
         <div class="section__container _container">
             <div class="section__body">
                 <div class="offer-slider">
@@ -858,7 +861,7 @@
                     <div class="swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="" class="offer-item">
+                                <a href="" class="offer-item _blue">
                                     <div class="offer-item__info">
                                         <span>Лизинг <label>без аванса</label></span>
                                         <p>Несколько слов об обязательных условиях акции или новости по акции</p>

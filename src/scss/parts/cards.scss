@@ -156,13 +156,14 @@
         @include adaptive-value("height", 213, 110, 1);
         overflow: hidden;
 
-        span,
-        .youtube,
-        label {
+        .youtube {
             position: absolute;
         }
 
-        span {
+        ._label {
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
             top: 10px;
             right: 10px;
             border-radius: 7px;
@@ -174,19 +175,18 @@
             font-weight: 600;
             line-height: 1.8;
             text-transform: uppercase;
-        }
 
-        label {
-            top: 10px;
-            right: 10px;
-            background-color: $text;
-            color: $white;
-            border-radius: 7px;
-            padding: 2px 8px;
-            font-size: 12px;
-            font-weight: 600;
-            line-height: 1.8;
-            text-transform: uppercase;
+            // ._label-new
+
+            &-new {
+            }
+
+            // ._label-on_way
+
+            &-on_way {
+                background-color: $text;
+                color: $white;
+            }
         }
 
         .youtube {
@@ -417,17 +417,16 @@
         z-index: 1;
 
         bottom: 0;
-        width: 46.21%;
-        right: 17%;
+        width: 53%;
+        right: 12%;
 
         transition: transform 0.3s ease 0s;
 
         @media (max-width: 1024px) {
             right: unset;
-            left: 20px;
-            width: calc(100% - 20px);
-            max-width: 340px;
-            bottom: -20px;
+            left: 0;
+            width: 100%;
+            max-width: 370px;
         }
     }
 
@@ -440,6 +439,14 @@
 
         @media (max-width: 768px) {
             gap: 8px;
+        }
+    }
+
+    &._blue {
+        background-color: #4e7ca5;
+
+        &:after {
+            background-color: #a6c1da;
         }
     }
 }
@@ -756,14 +763,35 @@
         display: block;
         overflow: hidden;
         height: 123px;
+        background-color: #3e474f;
+        position: relative;
 
         @media (max-width: 1024px) {
             height: 154px;
         }
 
+        picture {
+            height: 100%;
+        }
+
         img {
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            z-index: 1;
+            position: relative;
+            object-position: bottom;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            background-color: $accent;
+            transform: rotate(-28deg) translate(-17%, 25%);
+
+            width: 100%;
+            height: 150%;
+            left: 0;
+            top: 0;
         }
     }
 
@@ -790,6 +818,16 @@
 
             a {
                 color: $text;
+            }
+        }
+    }
+
+    &._blue {
+        .stock-item__img {
+            background-color: #4e7ca5;
+
+            &:after {
+                background-color: #a6c1da;
             }
         }
     }

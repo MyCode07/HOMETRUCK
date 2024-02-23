@@ -11,6 +11,8 @@ import "./parts/news.js";
 import "./parts/sliders.js";
 import "./static/ticker.js";
 import { calculator } from "./parts/calculator.js";
+import { playVideoAction } from "./parts/video.js";
+
 // import "./parts/catalog.js";
 // import "./parts/tabs.js";
 // import "./parts/filter.js";
@@ -22,6 +24,7 @@ import { calculator } from "./parts/calculator.js";
 replaceDomElements();
 stickyHeader();
 calculator();
+playVideoAction();
 
 
 import { Fancybox } from "@fancyapps/ui";

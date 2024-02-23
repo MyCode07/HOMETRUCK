@@ -292,12 +292,16 @@
                                 <span>Фильтр</span>
                             </button>
                             <div class="filter-search">
-                                <input type="text" placeholder="Камаз с кму...">
-                                <button>
-                                    <svg viewBox="0 0 14 15">
-                                        <use xlink:href="img/svg/icons.svg#search"></use>
-                                    </svg>
-                                </button>
+                                <form role="search" method="get" id="searchform"
+                                    action="https://hometruck.test-yeremyan.site/">
+                                    <input type="text" placeholder="Камаз с кму..." value="" name="s" id="s">
+                                    <button type="submit" id="searchsubmit">
+                                        <svg viewBox="0 0 14 15">
+                                            <use xlink:href="img/svg/icons.svg#search">
+                                            </use>
+                                        </svg>
+                                    </button>
+                                </form>
                             </div>
                             <button class="sort">
                                 <svg viewBox="0 0 24 25">
