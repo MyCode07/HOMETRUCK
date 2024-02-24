@@ -196,6 +196,11 @@
                 transition: all 0.3s ease 0s;
                 white-space: nowrap;
 
+                &._active {
+                    background-color: #ffedd9;
+                    color: $accent;
+                }
+
                 @media (any-hover: hover) {
                     &:hover {
                         color: $accent;

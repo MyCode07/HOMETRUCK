@@ -77,10 +77,12 @@
         img,
         svg {
             width: 103px;
+            height: 38px;
             flex: 0 0 auto;
 
             @media (max-width: 1024px) {
                 width: 88px;
+                height: 33px;
             }
 
             @media (max-width: 600px) {
