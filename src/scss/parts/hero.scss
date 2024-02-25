@@ -389,8 +389,12 @@
         &._blue {
             background-color: #4e7ca5;
 
-            .pages-page__img:before {
+            .pages-hero__img:before {
                 background-color: #a6c1da;
+            }
+
+            .breadcrumbs ul li div svg {
+                stroke: rgba($color: $white, $alpha: 0.5);
             }
         }
     }

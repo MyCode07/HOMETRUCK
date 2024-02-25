@@ -1,5 +1,7 @@
 import dhx from 'dhx-suite'
 
+const calculatorBlock = document.querySelector('.calculator');;
+
 const formatter = new Intl.NumberFormat("ru");
 function range(range) {
     if (!range) return;
@@ -29,10 +31,34 @@ function range(range) {
     return sliderRange;
 }
 
+
+const banks = document.querySelectorAll('.calculator .categories-list a');
+function toggleBanks() {
+    if (!banks.length) return;
+
+    banks.forEach(bank => {
+        bank.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            banks.forEach(b => {
+                b.closest('li').classList.remove('_active')
+            })
+
+            bank.closest('li').classList.add('_active')
+        })
+    })
+}
 const ranges = document.querySelectorAll('.range');
 
-export const calculator = () => {
-    if (!ranges.length) return;
+class Calculator {
+    constructor() {
 
-    ranges.forEach(item => range(item))
+    }
+
+    start() {
+        ranges.forEach(item => range(item))
+        toggleBanks();
+    }
 }
+
+export const calculator = new Calculator();

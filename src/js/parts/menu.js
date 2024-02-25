@@ -144,3 +144,37 @@ document.addEventListener('click', function (e) {
         }
     }
 })
+
+
+const replaceHeaderMenu = () => {
+    const replaceElem = header.querySelector('.main-menu');
+    if (!replaceElem) return;
+
+    let lockPosition = true;
+
+    const width = 1024
+    const newPosition = menu.querySelector('nav');
+    const oldPosition = header.querySelector('.header__menu');
+
+    const newPositionInsertType = 'afterbegin';
+    const oldPositionInsertType = 'afterbegin';
+
+    function replace() {
+        if (window.innerWidth <= width) {
+            if (lockPosition == true)
+                newPosition.insertAdjacentElement(newPositionInsertType, replaceElem)
+            lockPosition = false
+        }
+        else {
+            if (lockPosition == false)
+                oldPosition.insertAdjacentElement(oldPositionInsertType, replaceElem)
+            lockPosition = true
+        }
+
+    }
+
+    replace()
+    window.addEventListener('resize', replace)
+}
+
+replaceHeaderMenu();

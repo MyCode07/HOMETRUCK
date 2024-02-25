@@ -420,6 +420,7 @@ p {
         font-weight: 600;
         line-height: 1;
         text-transform: uppercase;
+        pointer-events: none;
     }
     svg {
         fill: none;
@@ -427,6 +428,11 @@ p {
         width: 14px;
         height: 14px;
         flex: 0 0 auto;
+        pointer-events: none;
+    }
+
+    &._hide {
+        display: none;
     }
 }
 
@@ -520,7 +526,7 @@ p {
 
     &-title {
         color: $text;
-        font-size: 16px;
+        font-size: 16px !important;
         font-weight: 700;
         line-height: 1.4;
         text-transform: uppercase;
@@ -782,7 +788,7 @@ p {
         display: block;
         padding-left: 23px !important;
         border-left: 1px solid $accent;
-        margin: 30px 0;
+        margin: 30px 0 !important;
     }
 
     p {
@@ -790,5 +796,39 @@ p {
         font-size: 14px;
         font-weight: 400;
         line-height: 1.4;
+    }
+
+    & > :not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    ul {
+        list-style: inherit;
+    }
+
+    ol {
+        list-style-type: numeric;
+    }
+
+    ol,
+    ul {
+        padding-left: 1em;
+
+        & > :not(:last-child) {
+            margin-bottom: 6px;
+        }
+    }
+
+    ul li {
+        list-style: initial;
+
+        &::marker {
+            font-size: 0.6em;
+            display: block;
+        }
+    }
+
+    ol li {
+        list-style: inherit;
     }
 }

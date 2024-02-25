@@ -48,7 +48,7 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="filter _open">
+                            <div class="filter filter__cat _open">
                                 <div class="filter__title">
                                     <span>Категории техники</span>
                                     <svg viewBox="0 0 7 12">
@@ -57,27 +57,33 @@
                                 </div>
                                 <div class="filter__items-list">
                                     <div class="filter__items-body _flex-wrap">
-                                        <button>Седельные тягачи</button>
-                                        <button>С фургоном</button>
-                                        <button>Самосвалы</button>
-                                        <button>Автобетоносмесиели</button>
-                                        <button>Автокраны</button>
-                                        <button>Полуприцепы</button>
-                                        <button>Вилочные погрузчики</button>
-                                        <button class="clue-button">
-                                            Б/У
+                                        <label for="cat-all">
+                                            <input id="cat-all" type="checkbox" name="cat" checked class="_all">
+                                            <p class="filter__item-name">Все</p>
+                                        </label>
+                                        <label for="cat-1">
+                                            <input id="cat-1" name="cat" type="checkbox">
+                                            <p class="filter__item-name">Седельные тягачи</p>
+                                        </label>
+                                        <label for="cat-2">
+                                            <input id="cat-2" name="cat" type="checkbox">
+                                            <p class="filter__item-name">С фургоном</p>
+                                        </label>
+                                        <label for="cat-3">
+                                            <input id="cat-3" name="cat" type="checkbox">
+                                            <p class="filter__item-name">Самосвалы</p>
+                                        </label>
+                                        <label for="cat-4" class="_clue">
+                                            <input id="cat-4" name="cat" type="checkbox">
+                                            <p class="filter__item-name">Б/У</p>
                                             <svg viewBox="0 0 18 18">
                                                 <use xlink:href="img/svg/icons.svg#clue"></use>
                                             </svg>
-                                            <div class="clue-text">
-                                                <p>Б/У - Автомобили из Трейд-ин или изъятые
-                                                    кредиторами, таможенной службой или иным органом. Все ограничения
-                                                    сняты,
-                                                    доступна продажа и использование в любой деятельности.</p>
-                                            </div>
-                                        </button>
-                                        <button>Кран-манипулятор (КМУ)</button>
-                                        <button>Кабины и запчасти</button>
+                                        </label>
+                                        <label for="cat-5">
+                                            <input id="cat-5" name="cat" type="checkbox">
+                                            <p class="filter__item-name">Кабины и запчасти</p>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +97,7 @@
                                 <div class="filter__items-list">
                                     <div class="filter__items-body">
                                         <label for="proizvoditel-all">
-                                            <input id="proizvoditel-all" type="checkbox">
+                                            <input id="proizvoditel-all" type="checkbox" checked class="_all">
                                             <span class="checkbox"></span>
                                             <p class="filter__item-name">Все</p>
                                             <span class="filter__item-qty qty">135</span>
@@ -142,37 +148,40 @@
                                         <use xlink:href="img/svg/icons.svg#link-arrow"></use>
                                     </svg>
                                 </div>
-
+                                <input type="hidden" name="price" min="5000000" max="10000000" data-min="" data-max="">
                                 <div class="filter__items-list">
                                     <div class="filter__items-body">
                                         <div class="filter__price-input">
-                                            <label for="ot">
+                                            <!-- <label for="ot">
                                                 <span>от</span>
-                                                <input id="ot" type="text">
+                                                <input id="ot" type="number" min="5000000" max="10000000" step="1"
+                                                    name="price-from" placeholder="5 000 000" class="price-text">
                                             </label>
                                             <div></div>
                                             <label for="do">
                                                 <span>до</span>
-                                                <input id="do" type="text">
-                                            </label>
+                                                <input id="do" type="number" min="5000000" max="10000000" step="1"
+                                                    name="price-to" placeholder="10 000 000" class="price-text">
+                                            </label> -->
                                         </div>
-                                        <label for="5000000">
-                                            <input name="price" id="5000000" type="radio">
+                                        <label for="5000000-10000000">
+                                            <input name="price-range" id="5000000-10000000" data-min="5000000"
+                                                data-max="10000000" type="radio" class="price-range">
                                             <span class="checkbox"></span>
-                                            <p class="filter__item-name">До 5 000 000</p>
-                                            <span class="filter__item-qty qty">20</span>
-                                        </label>
-                                        <label for="10000000">
-                                            <input name="price" id="10000000" type="radio">
+                                            <p class="filter__item-name">До 10 000 000 ₽</p>
+                                            <span class="filter__item-qty qty">1</span>
+                                        </label><label for="10000000-20000000">
+                                            <input name="price-range" id="10000000-20000000" data-min="10000000"
+                                                data-max="20000000" type="radio" class="price-range">
                                             <span class="checkbox"></span>
-                                            <p class="filter__item-name">до 10 000 000</p>
-                                            <span class="filter__item-qty qty">20</span>
-                                        </label>
-                                        <label for="20000000">
-                                            <input name="price" id="20000000" type="radio">
+                                            <p class="filter__item-name">До 20 000 000 ₽</p>
+                                            <span class="filter__item-qty qty">3</span>
+                                        </label><label for="20000000-100000000000">
+                                            <input name="price-range" id="20000000-100000000000" data-min="20000000"
+                                                data-max="100000000000" type="radio" class="price-range">
                                             <span class="checkbox"></span>
-                                            <p class="filter__item-name">до 20 000 000</p>
-                                            <span class="filter__item-qty qty">20</span>
+                                            <p class="filter__item-name">От 20 000 000 ₽</p>
+                                            <span class="filter__item-qty qty">1</span>
                                         </label>
                                     </div>
                                 </div>
@@ -187,7 +196,7 @@
                                 <div class="filter__items-list">
                                     <div class="filter__items-body">
                                         <label for="lyubaya">
-                                            <input id="lyubaya" type="checkbox">
+                                            <input id="lyubaya" type="checkbox" checked class="_all">
                                             <span class="checkbox"></span>
                                             <p class="filter__item-name">Любая</p>
                                             <span class="filter__item-qty qty">210</span>
@@ -241,7 +250,7 @@
                                 <div class="filter__items-list">
                                     <div class="filter__items-body">
                                         <label for="nalichie-all">
-                                            <input id="nalichie-all" type="checkbox">
+                                            <input id="nalichie-all" type="checkbox" checked class="_all">
                                             <span class="checkbox"></span>
                                             <p class="filter__item-name">Все</p>
                                             <span class="filter__item-qty qty">210</span>
@@ -307,7 +316,7 @@
                                 <svg viewBox="0 0 24 25">
                                     <use xlink:href="img/svg/icons.svg#sort"></use>
                                 </svg>
-                                <span>По цене</span>
+                                <span data-text-asc="Цена макс" data-text-desc="Цена мин">Цена мин</span>
                             </button>
                         </div>
                         <div class="grid grid-3">
