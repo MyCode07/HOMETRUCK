@@ -90,13 +90,13 @@ if (sliders.length) {
                 }
             })
         }
-        else if (slider.closest('.vidacha__slider-box')) {
+        else if (slider.closest('.vydacha__slider-box')) {
             new Swiper(slider, {
                 modules: [Navigation, Autoplay],
                 spaceBetween: 10,
                 navigation: {
-                    prevEl: document.querySelector(".vidacha__bottom-prev"),
-                    nextEl: document.querySelector(".vidacha__bottom-next"),
+                    prevEl: document.querySelector(".vydacha__bottom-prev"),
+                    nextEl: document.querySelector(".vydacha__bottom-next"),
                 },
                 breakpoints: {
                     300: {

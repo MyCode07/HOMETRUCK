@@ -695,14 +695,23 @@ p {
         }
     }
 
-    a {
+    a,
+    button {
+        flex: 0 0 auto;
         background-color: #f1f3f4;
         font-size: 14px;
         line-height: 1.2;
         border-radius: 10px;
         display: block;
         padding: 8px 8px 6px 8px;
+        transition: all 0.3s ease 0s;
     }
+
+    button._active {
+        background-color: #ffedd9;
+        color: $accent;
+    }
+
     ._active {
         a {
             background-color: #ffedd9;

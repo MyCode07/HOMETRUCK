@@ -134,7 +134,7 @@
     }
 }
 
-.trucks-item {
+.truck-item {
     border-radius: 10px;
     background-color: $white;
     overflow: hidden;
@@ -149,7 +149,7 @@
         }
     }
 
-    // .trucks-item__top
+    // .truck-item__top
 
     &__top {
         position: relative;
@@ -195,7 +195,7 @@
         }
     }
 
-    // .trucks-item__img
+    // .truck-item__img
 
     &__img {
         width: 100%;
@@ -211,7 +211,7 @@
         }
     }
 
-    // .trucks-item__bottom
+    // .truck-item__bottom
 
     &__bottom {
         padding: 16px 14px;
@@ -497,7 +497,7 @@
     }
 }
 
-.vidacha-item {
+.vydacha-item {
     display: block;
     border-radius: 10px;
     overflow: hidden;

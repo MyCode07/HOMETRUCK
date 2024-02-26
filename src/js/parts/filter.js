@@ -95,6 +95,13 @@ document.addEventListener('click', function (e) {
             span.textContent = span.dataset.textDesc
         }
     }
+
+    if (targetEl.hasAttribute('data-cat') && targetEl.closest('.categories-list')) {
+        e.preventDefault();
+        const activeTag = targetEl.closest('.categories-list').querySelector('[data-cat]._active');
+        activeTag.classList.remove('_active')
+        targetEl.classList.add('_active')
+    }
 })
 
 if (filters.length) {
