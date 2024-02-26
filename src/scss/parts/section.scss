@@ -882,6 +882,11 @@
             margin-left: -10px;
         }
     }
+
+    [data-tab-content]:not(._active) {
+        display: none;
+    }
+
     // .map-info
 
     &-info {
@@ -936,7 +941,7 @@
                 font-weight: 400;
                 line-height: 1.4;
                 text-transform: uppercase;
-                display: none;
+                display: flex;
                 gap: 12px;
 
                 @media (max-width: 1024px) {
@@ -945,10 +950,6 @@
 
                 label {
                     font-weight: 700;
-                }
-
-                &._active {
-                    display: flex;
                 }
             }
         }
@@ -978,9 +979,15 @@
     // .map-cart
 
     &-cart {
-        min-height: 280px;
+        div {
+            height: 100%;
+            min-height: 280px;
+        }
 
-        img {
+        img,
+        picture,
+        iframe {
+            width: 100%;
             object-fit: cover;
             height: 100%;
         }
