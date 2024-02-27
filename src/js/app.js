@@ -10,12 +10,14 @@ import "./parts/sliders.js";
 import "./static/ticker.js";
 import { playVideoAction } from "./parts/video.js";
 import { calculator } from "./parts/calculator.js";
+import { toolTipAction } from "./parts/tooltip.js";
 
 replaceDomElements();
 stickyHeader();
 playVideoAction();
 
 calculator.start();
+toolTipAction()
 
 
 import { Fancybox } from "@fancyapps/ui";

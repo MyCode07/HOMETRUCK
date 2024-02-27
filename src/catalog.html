@@ -32,17 +32,17 @@
                             <div class="catalog-sidebar__top">
                                 <div>
                                     <span>Фильтр</span>
-                                    <a href="">
+                                    <button class="_close-filter">
                                         <svg viewBox="0 0 18 15">
                                             <use xlink:href="img/svg/icons.svg#catalog-back"></use>
                                         </svg>
-                                    </a>
+                                    </button>
                                 </div>
                                 <div class="result">
                                     <p>Найдено</p>
                                     <label class="qty">135</label>
                                 </div>
-                                <button class="filter__close">
+                                <button class="filter__close _close-filter">
                                     <svg viewBox="0 0 24 25">
                                         <use xlink:href="img/svg/icons.svg#close"></use>
                                     </svg>
@@ -73,7 +73,7 @@
                                             <input id="cat-3" name="cat" type="checkbox">
                                             <p class="filter__item-name">Самосвалы</p>
                                         </label>
-                                        <label for="cat-4" class="_clue">
+                                        <label for="cat-4" class="_clue" data-tooltip="Б/У - Автомобили из Трейд-ин или изъятые кредиторами, таможенной службой или иным органом. Все ограничения сняты, доступна продажа и использование в любой деятельности. ">
                                             <input id="cat-4" name="cat" type="checkbox">
                                             <p class="filter__item-name">Б/У</p>
                                             <svg viewBox="0 0 18 18">
@@ -284,12 +284,12 @@
                             </div>
                         </div>
                         <div class="catalog-sidebar__actions">
-                            <button class="reset"><span>сбросить</span>
+                            <button class="reset _close-filter"><span>сбросить</span>
                                 <svg viewBox="0 0 18 15">
                                     <use xlink:href="img/svg/icons.svg#catalog-back"></use>
                                 </svg>
                             </button>
-                            <button class="apply"><span>Применить</span></button>
+                            <button class="apply _close-filter"><span>Применить</span></button>
                         </div>
                     </div>
                     <div class="catalog-content">

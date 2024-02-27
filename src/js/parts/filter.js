@@ -102,6 +102,11 @@ document.addEventListener('click', function (e) {
         activeTag.classList.remove('_active')
         targetEl.classList.add('_active')
     }
+
+    if (targetEl.classList.contains('_close-filter') && targetEl.closest('.catalog-sidebar._open')) {
+        targetEl.closest('.catalog-sidebar._open').classList.remove('_open')
+        unLockPadding()
+    }
 })
 
 if (filters.length) {
@@ -173,8 +178,5 @@ if (mobileFilterOpenButton) {
 if (mobileFilterCloseButton) {
     mobileFilterCloseButton.addEventListener('click', () => {
         mobileFilterOpenButton.classList.remove("_active")
-        mobileFilter.classList.remove("_open")
-
-        unLockPadding()
     })
 }
