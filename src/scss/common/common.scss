@@ -377,6 +377,10 @@ p {
     text-transform: uppercase;
     transition: color 0.3s ease 0s;
 
+    @media (max-width: 1024px) {
+        gap: 8px;
+    }
+
     @media (any-hover: hover) {
         &:hover {
             color: $accent !important;
@@ -640,12 +644,14 @@ p {
     margin-left: -20px;
     padding-inline: 20px;
 
-    @media (max-width: 768px) {
-        width: 93vw;
-        overflow-x: auto;
+    &:not(._wrap) {
+        @media (max-width: 768px) {
+            width: 93vw;
+            overflow-x: auto;
 
-        &::-webkit-scrollbar {
-            display: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
     }
 
@@ -677,15 +683,17 @@ p {
     position: relative;
     z-index: 1;
 
-    @media (max-width: 1024px) {
-        flex-wrap: nowrap;
-        width: 100vw;
-        margin-left: -10px;
-        padding: 0 10px;
-        overflow-x: auto;
+    &:not(._wrap) {
+        @media (max-width: 1024px) {
+            flex-wrap: nowrap;
+            width: 100vw;
+            margin-left: -10px;
+            padding: 0 10px;
+            overflow-x: auto;
 
-        &::-webkit-scrollbar {
-            display: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
     }
 
@@ -840,10 +848,14 @@ p {
     ol li {
         list-style: inherit;
     }
+
+    h5 {
+        color: inherit;
+    }
 }
 
 .tooltip {
-    position: fixed;
+    position: absolute;
 
     z-index: 4;
     display: none;
@@ -863,7 +875,21 @@ p {
     text-align: left;
 
     @media (any-hover: none) {
-        transform: translate(-50%, -100%);
+        // position: fixed;
+        // transform: translate(-50%, -50%);
         max-width: calc(100% - 40px);
+
+        // &:before {
+        //     position: absolute;
+        //     content: "";
+        //     top: 10px;
+        //     right: 10px;
+        //     width: 15px;
+        //     height: 15px;
+        //     background-size: 250%;
+        //     background-repeat: no-repeat;
+        //     background-position: center;
+        //     background-image: url("@img/svg/icons.svg#close");
+        // }
     }
 }

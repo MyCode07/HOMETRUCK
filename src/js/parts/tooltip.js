@@ -4,30 +4,50 @@ function updateTooltipPosition(e, tooltip) {
     const xOffset = 0;
     const yOffset = -10;
 
-    // Учитываем смещение прокрутки страницы
-    const tooltipRight = e.target.getBoundingClientRect().right;
-    const tooltipTop = e.target.getBoundingClientRect().top;
+    const elemRight = e.target.getBoundingClientRect().right;
+    const elemHeight = e.target.getBoundingClientRect().height;
+    const elemTop = e.target.getBoundingClientRect().top;
     const tooltipWidth = tooltip.getBoundingClientRect().width;
-    const slodeToRightSide = window.innerWidth - tooltipRight
+    const tooltipHeight = tooltip.getBoundingClientRect().height;
+
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+
+    const tooltipX = elemRight + xOffset;
+    const tooltipY = elemTop + scrollTop + yOffset;
+
+    const slideToRightSide = window.innerWidth - elemRight
 
 
-    // Вычисляем позицию подсказки
-    const tooltipX = tooltipRight + xOffset;
-    const tooltipY = tooltipTop + yOffset;
+    if (tooltipHeight > elemTop) {
+        tooltip.style.top = tooltipY + tooltipHeight + elemHeight - yOffset + 'px';
+    }
+    else {
+        tooltip.style.top = tooltipY + 'px';
+    }
 
-    tooltip.style.top = tooltipY + 'px';
-
-    if (!isMobile.any()) {
-        if (slodeToRightSide <= tooltipWidth + 20) {
-            tooltip.style.left = tooltipRight - tooltipWidth + 'px';
-
+    if (slideToRightSide <= tooltipWidth + 20) {
+        if (elemRight - tooltipWidth <= 10) {
+            tooltip.style.left = 10 + 'px';
         }
         else {
-            tooltip.style.left = tooltipX + 'px';
+            tooltip.style.left = elemRight - tooltipWidth + 'px';
         }
     }
     else {
-        tooltip.style.left = '50%';
+        tooltip.style.left = tooltipX + 'px';
+    }
+
+    if (e.target.closest('.catalog-sidebar')) {
+        document.querySelector('.catalog-sidebar').addEventListener('scroll', (e) => {
+            scrollTop = e.target.scrollTop;
+            tooltip.style.top = tooltipY - scrollTop + 'px';
+        })
+    }
+    else {
+        window.addEventListener('scroll', (e) => {
+            scrollTop = e.scrollTop;
+            tooltip.style.top = tooltipY - scrollTop + 'px';
+        })
     }
 }
 
@@ -68,6 +88,15 @@ export const toolTipAction = () => {
                     }
                 })
             }
+        }
+    })
+
+    document.addEventListener('click', function (e) {
+        let targetEl = e.target;
+        const activeToolTip = document.querySelector('[data-tooltip] ._clicked');
+        if (!targetEl.hasAttribute('data-tooltip') && !targetEl.closest('[data-tooltip]') && activeToolTip && toolTipElem) {
+            activeToolTip.classList.remove('_clicked');
+            toolTipElem.style.display = 'none'
         }
     })
 }
