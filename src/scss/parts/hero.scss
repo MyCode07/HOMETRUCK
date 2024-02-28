@@ -350,8 +350,13 @@
                 }
 
                 .name {
+                    max-height: 151px;
                     width: 100%;
                     object-fit: contain;
+
+                    @media (max-width: 600px) {
+                        max-height: 70px;
+                    }
                 }
             }
         }

@@ -110,12 +110,12 @@
                             </ul>
                         </div>
                         <div class="calculator-body">
-                            <div class="calculator-range cost">
+                            <div class="calculator-range sum">
                                 <div class="calculator-range__top">
                                     <h3>Стоимость имущества</h3>
-                                    <div class="price"> <span>13 000 000</span> ₽ </div>
+                                    <div class="price"> <span data-value="500000">500 000</span> ₽ </div>
                                 </div>
-                                <div class="range" data-min="500000" data-max="50000000" data-step="100000">
+                                <div class="range range-sum" data-min="500000" data-max="50000000" data-step="100000">
                                     <div class="range-slider"></div>
                                     <div class="range-output">
                                         <div class="range-min">500 000</div>
@@ -123,12 +123,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="calculator-range initial">
+                            <div class="calculator-range avans">
                                 <div class="calculator-range__top">
                                     <h3>Первоначальный взнос</h3>
-                                    <div class="price"> <span>2 500 000</span> ₽ </div>
+                                    <div class="price"> <span data-value="0">0</span> ₽ </div>
                                 </div>
-                                <div class="range" data-min="0" data-max="10000000" data-step="10000">
+                                <div class="range range-avans" data-min="0" data-max="10000000" data-step="10000">
                                     <div class="range-slider"></div>
                                     <div class="range-output">
                                         <div class="range-min">0</div>
@@ -136,12 +136,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="calculator-range contract">
+                            <div class="calculator-range months">
                                 <div class="calculator-range__top">
                                     <h3>Срок договора</h3>
-                                    <div class="price"> <span>36</span> мес </div>
+                                    <div class="price"> <span data-value="12">12</span> мес </div>
                                 </div>
-                                <div class="range" data-min="12" data-max="60" data-step="12">
+                                <div class="range range-months" data-min="12" data-max="60" data-step="12">
                                     <div class="range-slider"></div>
                                     <div class="range-output">
                                         <div class="range-min">12 мес</div>
@@ -175,7 +175,7 @@
                             </div>
                             <div class="calculator-result__tax">
                                 <button class="clue-button"
-                                    data-tooltip="Б/У - Автомобили из Трейд-ин или изъятые кредиторами, таможенной службой или иным органом. Все ограничения сняты, доступна продажа и использование в любой деятельности.">
+                                    data-tooltip="Оформляя технику в лизинг вы экономите за счет НДС и налоге на прибыль. - Вы можете вернуть НДС, входящий в состав лизинговых платежей, оформив налоговый вычет.-Вы не платите налог на прибыль с суммы финансирования, так как она относится к расходам.Для компаний на основной системе налогообложения.">
                                     <span>Экономия по налогам:</span>
                                     <svg viewBox="0 0 18 18">
                                         <use xlink:href="img/svg/icons.svg#clue"></use>
