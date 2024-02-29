@@ -35,7 +35,8 @@
             overflow: hidden;
             position: relative;
 
-            @media (max-width: 768px) {
+            @media (max-width: 1024px) {
+                padding: 20px 10px;
                 width: 100vw;
                 border-radius: 0;
                 margin-left: -10px;
