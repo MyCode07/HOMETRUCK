@@ -657,7 +657,7 @@ p {
 
     li {
         flex: 0 0 auto;
-        
+
         a {
             color: $text;
             font-size: 16px;
@@ -894,4 +894,8 @@ p {
         //     background-image: url("@img/svg/icons.svg#close");
         // }
     }
+}
+
+[data-open-popup] * {
+    pointer-events: none;
 }

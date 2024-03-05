@@ -6,6 +6,7 @@ import "./parts/filter.js";
 import "./parts/tabs.js";
 import "./parts/news.js";
 
+import "./parts/popup.js";
 import "./parts/sliders.js";
 import "./static/ticker.js";
 import { playVideoAction } from "./parts/video.js";

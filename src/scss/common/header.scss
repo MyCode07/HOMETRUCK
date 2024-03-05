@@ -5,7 +5,7 @@
     width: calc(100% - 40px);
     z-index: 10;
 
-    transition: all 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s;
 
     @media (min-width: 1025px) {
         border-top-left-radius: 10px;
