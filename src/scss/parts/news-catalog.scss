@@ -153,7 +153,15 @@
 
             a,
             button {
+                display: block;
                 text-transform: uppercase;
+                transition: color 0.3s ease 0s;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: $accent;
+                    }
+                }
             }
         }
     }

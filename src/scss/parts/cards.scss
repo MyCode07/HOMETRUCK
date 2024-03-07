@@ -368,8 +368,10 @@
             font-weight: 500;
             line-height: 0.6;
             text-transform: uppercase;
+            max-width: 500px;
 
             @media (max-width: 768px) {
+                max-width: none;
                 font-weight: 700;
                 line-height: 1;
                 margin-bottom: 13px;
