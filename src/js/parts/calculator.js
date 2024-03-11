@@ -19,6 +19,7 @@ class Calculator {
 
     start() {
         if (!this.calculatorBlock) return;
+
         this.ranges.forEach(item => this.range(item))
         this.toggleBanks();
         this.calculate()
@@ -59,7 +60,7 @@ class Calculator {
             bank.addEventListener('click', (e) => {
                 e.preventDefault();
 
-                banks.forEach(b => {
+                this.banks.forEach(b => {
                     b.closest('li').classList.remove('_active')
                 })
 

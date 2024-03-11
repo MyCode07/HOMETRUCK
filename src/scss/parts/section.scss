@@ -240,6 +240,26 @@
         left: -32px;
         transform: translate(0, -50%) rotate(180deg);
     }
+
+    // .offer-fullimg
+
+    &-fullimg {
+        .swiper-slide .image {
+            max-width: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            img,
+            picture {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
 }
 
 .media {
