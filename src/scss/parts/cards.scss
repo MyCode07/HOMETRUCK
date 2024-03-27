@@ -551,6 +551,7 @@
     overflow: hidden;
     border: 1px solid rgba(44, 48, 52, 0.05);
     box-shadow: 15px 14px 20px 0 rgba(0, 0, 0, 0.03);
+    background-color: $white;
 
     &:before {
         display: block;
@@ -789,7 +790,7 @@
 
         img {
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             z-index: 1;
             position: relative;
             object-position: bottom;
@@ -1066,5 +1067,19 @@
             width: 100%;
             height: auto;
         }
+    }
+}
+
+._desctop {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+._mobile {
+    display: none;
+
+    @media (max-width: 1024px) {
+        display: block;
     }
 }

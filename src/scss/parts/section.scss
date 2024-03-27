@@ -244,6 +244,10 @@
     // .offer-fullimg
 
     &-fullimg {
+        .offer-item {
+            background-color: unset;
+        }
+
         .swiper-slide .image {
             max-width: none;
             position: absolute;
@@ -257,6 +261,10 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+
+                @media (max-width: 1024px) {
+                    object-position: 70%;
+                }
             }
         }
     }
@@ -1176,3 +1184,14 @@
         line-height: 1.4;
     }
 }
+
+.stock-item__img:after {
+    display: none;
+}
+
+.offer-item:after {
+    display: none;
+}
+
+
+
