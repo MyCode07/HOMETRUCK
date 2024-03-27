@@ -595,3 +595,34 @@
         }
     }
 }
+
+.stock-hero {
+    position: relative;
+
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        img,
+        picture {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: bottom;
+
+            @media (max-width: 768px) {
+                height: 50%;
+                object-fit: cover;
+                flex: 0 0 auto;
+            }
+        }
+    }
+}
